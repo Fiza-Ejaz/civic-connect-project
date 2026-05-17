@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // Allow frontend
+  origin: ['http://localhost:3000', process.env.FRONTEND_URL], // Allow frontend (local and deployed)
   credentials: true
 }));
 app.use(express.json());
